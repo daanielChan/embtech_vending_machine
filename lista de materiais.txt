@@ -1,0 +1,11 @@
+Arduino Mega - 1x
+Fonte de tensão (Fonte De Alimentaçao 5v 10a 50w Colméia Bivolt Estabilizada) - 1x
+Modulos rele 8 canais - 5x
+Display i2c - 1x
+TCA9548A - 5x
+Botões - 5x
+Moedeiro - 1x
+Noteiro - 1x
+Sensor de presença - 1x
+LEDs - 40x 
+Resistores para leds (270ohms) - 40x
