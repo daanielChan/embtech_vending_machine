@@ -14,18 +14,21 @@ btn_interface_t::btn_interface_t (pins_t pins) {
 
 btn_interface_t::btn_action_t btn_interface_t::get_action() {
   btn_action_t ret_val = btn_action_t::NONE;
-
-  if (digitalRead(m_pins.left)) {
+  
+  if (!digitalRead(m_pins.left)) {
     ret_val = btn_action_t::LEFT;
-  } else if (digitalRead(m_pins.right)){
+  } else if (!digitalRead(m_pins.right)){
     ret_val = btn_action_t::RIGHT;
-  } else if (digitalRead(m_pins.top)){
+  } else if (!digitalRead(m_pins.top)){
     ret_val = btn_action_t::TOP;
-  } else if (digitalRead(m_pins.left)){
+  } else if (!digitalRead(m_pins.down)){
     ret_val = btn_action_t::DOWN;
-  } else if (digitalRead(m_pins.center)){
+  } else if (!digitalRead(m_pins.center)){
     ret_val = btn_action_t::CENTER;
   }
-
+  
+  if (ret_val != btn_action_t::NONE) {
+    delay(200);
+  }
   return ret_val;
 }
